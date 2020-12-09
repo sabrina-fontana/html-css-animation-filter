@@ -1,0 +1,229 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+}
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+}
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+}
+.ex-10-icon {
+    font-size: 60px;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+/* ESERCIZIO 1 */
+.ex-1-square:hover {
+  background-color: red;
+  transition: background 2s;
+}
+
+/* ESERCIZIO 2 */
+.ex-2-square:hover {
+  width: 400px;
+  transition: width 2s;
+}
+
+/* ESERCIZIO 3  */
+.ex-3-square:hover {
+  border-radius: 50%;
+  transition: border-radius 2s;
+}
+
+/* ESERCIZIO 4 */
+.ex-4-square:hover {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+/* ESERCIZIO 5 */
+.ex-5-square:hover {
+  transform: scale(1.5);
+  transition: transform 2s;
+}
+
+.ex-5-square:active {
+  transform: scale(0.7);
+  transition: transform 2s;
+}
+
+/* ESERCIZIO 6 */
+.ex-6-img:hover {
+  filter: grayscale(100%);
+}
+
+/* ESERCIZIO 7 */
+.ex-7-img:hover {
+  filter: grayscale(100%);
+  transition: filter 2s;
+}
+
+/* ESERCIZIO 8 */
+.ex-8-img:hover {
+  filter: sepia(100%);
+  border-radius: 20px;
+  transition: filter 2s, border-radius 2s;
+}
+
+/* ESERCIZIO 9 */
+.ex-9-img:hover {
+  filter: opacity(70%);
+  border-radius: 10px;
+  transform: scale(1.5);
+  transition: filter 2s, border-radius 2s, transform 2s;
+}
+
+
+/* ESERCIZIO 10 */
+.ex-10-icon {
+  animation-name: rotate-10;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-10 {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+/* ESERCIZIO 11 */
+.ex-11-icon {
+  animation-name: rotate-11;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-11 {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(-360deg)}
+}
+
+.ex-11-icon:hover {
+  animation-name: rotate-11-reverse;
+}
+
+@keyframes rotate-11-reverse {
+  0% {transform: rotate(0deg)}
+  80% {transform: rotate(270deg)}
+  100% {transform: rotate(0deg);}
+}
+
+/* ESERCIZIO 12 */
+.ex-12-top-white {
+  animation-name: space-top-12;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes space-top-12 {
+  0% {left: 10%}
+  50% {left: 65%}
+  100% {left: 10%}
+}
+
+.ex-12-bottom-white {
+  animation-name: space-bottom-12;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes space-bottom-12 {
+  0% {right: 20%}
+  50% {right: 65%}
+  100% {right: 20%}
+}
+
+/* ESERCIZIO 13 */
+.ex-13-top-white {
+  animation-name: space-top-13;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes space-top-13 {
+  0% {top: -10px; left: 50%}
+  17% {top: -10px; left: -10px}
+  34% {top: 100%; left: -10px}
+  51% {top: 100%; left: 50%}
+  68% {top: 100%; left: 190px}
+  85% {top: -10px; left: 190px}
+  100% {top: -10px; left: 50%}
+}
+
+.ex-13-bottom-white {
+  animation-name: space-bottom-13;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes space-bottom-13 {
+  0% {bottom: -10px; right: 50%}
+  17% {bottom: -10px; right: -10px}
+  34% {bottom: 100%; right: -10px}
+  51% {bottom: 100%; right: 50%}
+  68% {bottom: 100%; right: 150px}
+  85% {bottom: -10px; right: 150px}
+  100% {bottom: -10px; right: 50%}
+}
